@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy 21 Chapter of Your Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta property="og:title" content="Happy 21 Chapter of Your Life" />
+    <meta
+      property="og:description"
+      content="A romantic flipbook made for Mun."
+    />
+    <meta property="og:image" content="./og.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="book-cover-container" class="book-cover-container">
+      <div class="book-3d">
+        <div class="book-spine"></div>
+        <div class="book-front">
+          <div class="book-decoration top-left"></div>
+          <div class="book-decoration top-right"></div>
+          <div class="book-decoration bottom-left"></div>
+          <div class="book-decoration bottom-right"></div>
+          <div class="book-title">Happy</div>
+          <div class="book-number">21</div>
+          <div class="book-subtitle">Chapter of Your Life</div>
+          <div class="book-hint">Click to Open</div>
+          <div class="heart-decoration">&#10084;</div>
+        </div>
+        <div class="book-back">
+          <div class="back-message">
+            <div class="back-title">Happy Birthday, Mun</div>
+            <div class="back-sub">
+              You’re my favorite chapter — the one I never want to end.
+            </div>
+            <div class="back-sub back-sub-2">I love you, always. &#10084;</div>
+          </div>
+          <div class="back-author">Written by Gohar Abbas</div>
+        </div>
+        <div class="book-pages-side"></div>
+      </div>
+    </div>
+
+    <div id="book-container" class="book-container hidden">
+      <div id="top-ui" class="top-ui">
+        <button id="btn-menu" class="ui-btn" aria-label="Chapters">☰</button>
+        <div class="ui-progress">
+          <div class="ui-progress-text">
+            <span id="ui-chapter">Chapter 1</span>
+            <span class="dot">•</span>
+            <span id="ui-page">Page 1</span>
+          </div>
+          <div class="ui-progress-bar">
+            <div id="ui-progress-fill" class="ui-progress-fill"></div>
+          </div>
+        </div>
+        <button id="btn-sound" class="ui-btn" aria-label="Sound">🔇</button>
+      </div>
+
+      <div
+        id="chapters-drawer"
+        class="chapters-drawer hidden"
+        aria-hidden="true"
+      >
+        <div class="drawer-header">
+          <div class="drawer-title">Chapters</div>
+          <button id="btn-close-drawer" class="ui-btn" aria-label="Close">
+            ✕
+          </button>
+        </div>
+        <div id="chapters-list" class="chapters-list"></div>
+      </div>
+
+      <div
+        id="easter-egg"
+        class="easter-egg hidden"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div class="egg-card">
+          <div class="egg-title">One more thing…</div>
+          <div class="egg-text">
+            You’re my favorite chapter — the one I never want to end. ❤
+          </div>
+          <button id="btn-egg-close" class="hint-btn">Close</button>
+        </div>
+      </div>
+
+      <div class="navigation-hint">
+        <span>Swipe or click page edges to flip</span>
+      </div>
+      <div id="book"></div>
+    </div>
+
+    <div id="birthday-message" class="birthday-message">
+      <h1>Happy Birthday Mun</h1>
+      <div class="heart-big">&#10084;</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
